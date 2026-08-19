@@ -1,8 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"log"
+
+	httpserver "DCacheX/internal/server/http"
+)
+
 func main() {
+	server := httpserver.NewServer(":8080")
+	log.Println("Http server listening on :8080")
 
-	fmt.Println("init project")
+	if err := server.Start(); err != nil {
+		log.Fatal(err)
+	}
 }
-
