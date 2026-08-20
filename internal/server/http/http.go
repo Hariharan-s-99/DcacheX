@@ -1,3 +1,4 @@
+// Package http provides the HTTP server, routes, handlers, and middleware.
 package http
 
 import (
